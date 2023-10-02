@@ -9,9 +9,17 @@ class Rectangle:
     """This class defines a rectangle with two attributes; height and width"""
 
     def __init__(self, width=0, height=0):
-        """This method instantiates our objects"""
-        self.__width = width
-        self.__height = height
+        """This method instantiates our objects
+        Args:
+        width (int): The width of the new rectangle.
+        height (int): The height of the new rectangle.
+        """
+        self.width = width
+        self.height = height
+
+    def get_width(self):
+        """This method retrives the width"""
+        return self.__width
 
     def set_width(self, width):
         """This method sets the width attribute value"""
@@ -22,9 +30,9 @@ class Rectangle:
         else:
             self.__width = width
 
-    def get_width(self):
-        """This method retrives the width"""
-        return self.__width
+    def get_height(self):
+        """This method returns the height attribute of our object"""
+        return self.__height
 
     def set_height(self, height):
         """This method sets the height attribute value"""
@@ -34,10 +42,3 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = height
-
-    def get_height(self):
-        """This method returns the height attribute of our object"""
-        return self.__height
-
-    def __repr__(self):
-        return "Rectangle(" + str(self.__width) + ", " + str(self.__height) + ")"
