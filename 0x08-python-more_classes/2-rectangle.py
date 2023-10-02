@@ -55,13 +55,4 @@ class Rectangle:
         """This method calculates the rectangle's perimeter"""
         if self.__width == 0 or self.__height == 0:
             return 0
-        return self.__height + self.__width
-
-    def __repr__(self):
-        return "Employee('" + str(self.__height) + "', " + str(self.__width) + ")"
-
-
-x = Rectangle(2, 3)
-
-print(x.perimeter())
-print(x.area())
+        return (self.__height * 2) + (self.__width * 2)
