@@ -37,8 +37,8 @@ class Rectangle:
         """This method returns the height attribute of our object"""
         return self.__height
 
-    @height.getter
-    def set_height(self, height):
+    @height.setter
+    def height(self, height):
         """This method sets the height attribute value"""
         if type(height) != int:
             raise TypeError("height must be an integer")
@@ -46,3 +46,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = height
+
+    def __repr__(self):
+        return "Employee('" + str(self.__height) + "', " + str(self.__width) + ")"
