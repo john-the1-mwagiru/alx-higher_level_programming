@@ -41,11 +41,3 @@ class Rectangle:
 
     def __repr__(self):
         return "Rectangle(" + str(self.__width) + ", " + str(self.__height) + ")"
-
-
-x = Rectangle()
-x.set_height(2)
-x.set_width(3)
-fetch = x.get_height()
-fetch1 = x.get_width()
-print(x)
