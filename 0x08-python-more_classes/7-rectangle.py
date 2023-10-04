@@ -71,7 +71,7 @@ class Rectangle:
 
         rect = []
         for i in range(self.__height):
-            [rect.append(Rectangle.print_symbol) for j in range(self.__width)]
+            [rect.append(self.print_symbol) for j in range(self.__width)]
             if i != self.__height - 1:
                 rect.append("\n")
         return "".join(rect)
@@ -84,7 +84,3 @@ class Rectangle:
         """Deletes an instance of a class"""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
-
-
-x = Rectangle(4, 6)
-print(x)
