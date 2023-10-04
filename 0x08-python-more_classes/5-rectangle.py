@@ -79,8 +79,3 @@ class Rectangle:
     def __del__(self):
         """Deletes an instance of a class"""
         print("Bye rectangle...")
-
-
-x = Rectangle(8, 9)
-del x
-print(x)
