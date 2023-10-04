@@ -62,6 +62,9 @@ class Rectangle:
 
         Represents a rectangle with the # character
         """
+        if self.__height == 0 or self.__width == 0:
+            return ""
+
         rect = []
         for i in range(self.__height):
             [rect.append("#") for j in range(self.__width)]
