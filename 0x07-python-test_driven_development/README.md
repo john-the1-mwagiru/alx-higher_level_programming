@@ -1,6 +1,8 @@
 ## Task
-This directory will host all task from 0x07-python-more_classes
+This directory will host all task from 0x07-python-test_driven_development
 ## Objectives
-* To grasp OOP concepts
-
+* To learn more about docstrings
+* To understand how to use tests better
+* Use unittest
+* Use doctests 
 * Learn how to document properly
