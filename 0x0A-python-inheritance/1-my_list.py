@@ -6,6 +6,5 @@ class MyList(list):
     """This class defines a class that prints a list but in ascending order"""
 
     def print_sorted(self):
-        if isinstance(self, list):
-            self.sort()
-            print(self)
+        """Print a list in sorted ascending order"""
+        print(sorted(self))
