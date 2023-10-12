@@ -3,7 +3,7 @@
 BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
 
-class Rectangle:
+class Rectangle(BaseGeometry):
     def __init__(self, width, height):
         """This function instantiates our objects and also validates the type of our objects
         Args:
