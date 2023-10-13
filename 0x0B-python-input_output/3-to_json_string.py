@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""This module SON representation of an object (string)"""
+"""This module return JSON representation of an object (string)"""
 import json
 
 
