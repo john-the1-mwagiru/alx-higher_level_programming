@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-import json
 
 """This module SON representation of an object (string)"""
+import json
 
 
 def to_json_string(my_obj):
@@ -13,5 +13,4 @@ def to_json_string(my_obj):
         json object
 
     """
-    new_object = json.dumps(my_obj)
-    return new_object
+    return json.dumps(my_obj)
