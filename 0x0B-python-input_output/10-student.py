@@ -15,6 +15,6 @@ class Student:
         """Retrieves a dictionary representation of a Student"""
         obj_attr = self.__dict__
         if attrs:
-            attributes = {a: x[a] for a in x if a in attrs}
+            attributes = {att: obj_attr[att] for att in obj_attr if att in attrs}
             return attributes
         return obj_attr
