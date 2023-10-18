@@ -23,6 +23,8 @@ class Rectangle(Base):
     @width.setter
     def width(self, width):
         """Sets the the value of the width attribute"""
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
         self.__width = width
 
     @property
@@ -33,6 +35,8 @@ class Rectangle(Base):
     @height.setter
     def height(self, height):
         """Sets the value of the height attribute"""
+        if not isinstance(height, int):
+            raise TypeError("height must be an integer")
         self.__height = height
 
     @property
@@ -43,6 +47,8 @@ class Rectangle(Base):
     @x.setter
     def x(self, x):
         """Sets the x attribute value"""
+        if not isinstance(x, int):
+            raise TypeError("x must be an integer")
         self.__x = x
 
     @property
@@ -53,4 +59,6 @@ class Rectangle(Base):
     @y.setter
     def y(self, y):
         """Sets the y attribute value"""
+        if not isinstance(y, int):
+            raise TypeError("y must be an integer")
         self.__y = y
