@@ -62,3 +62,7 @@ class Rectangle(Base):
         if not isinstance(y, int):
             raise TypeError("y must be an integer")
         self.__y = y
+
+    def area(self):
+        """Public method that returns the area of the Rectangle instance"""
+        return self.height * self.width
