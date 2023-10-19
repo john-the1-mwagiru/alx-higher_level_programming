@@ -85,12 +85,3 @@ class Rectangle(Base):
         string += str(self.x) + "/" + str(self.y) + " " + "-" + " "
         string += str(self.width) + "/" + str(self.height)
         return string
-
-
-r1 = Rectangle(2, 3, 2, 2)
-print(r1.display())
-
-print("---")
-
-r2 = Rectangle(3, 2, 1, 0)
-print(r2.display())
