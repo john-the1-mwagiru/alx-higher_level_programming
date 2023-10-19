@@ -69,12 +69,15 @@ class Rectangle(Base):
 
     def display(self):
         """Public method that prints in stdout the Rectangle instance with the character #"""
-        rect = []
-        for i in range(self.height):
-            [rect.append("#") for j in range(self.width)]
-            if i != self.height - 1:
-                rect.append("\n")
-        print("".join(rect))
+        if self.width == 0 or self.height == 0:
+            print("")
+            return
+
+        [print("") for y in range(self.y)]
+        for h in range(self.height):
+            [print(" ", end="") for x in range(self.x)]
+            [print("#", end="") for w in range(self.width)]
+            print("")
 
     def __str__(self):
         string = "[" + str(self.__class__.__name__) + "] "
@@ -82,3 +85,12 @@ class Rectangle(Base):
         string += str(self.x) + "/" + str(self.y) + " " + "-" + " "
         string += str(self.width) + "/" + str(self.height)
         return string
+
+
+r1 = Rectangle(2, 3, 2, 2)
+print(r1.display())
+
+print("---")
+
+r2 = Rectangle(3, 2, 1, 0)
+print(r2.display())
