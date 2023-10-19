@@ -87,16 +87,28 @@ class Rectangle(Base):
         string += str(self.width) + "/" + str(self.height)
         return string
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """This function updates the class Rectangle"""
-        for i in args:
-            if args.index(i) == 0:
-                self.id = i
-            if args.index(i) == 1:
-                self.width = i
-            if args.index(i) == 2:
-                self.height = i
-            if args.index(i) == 3:
-                self.x = i
-            if args.index(i) == 4:
-                self.y = i
+        if args:
+            for i in args:
+                if args.index(i) == 0:
+                    self.id = i
+                if args.index(i) == 1:
+                    self.width = i
+                if args.index(i) == 2:
+                    self.height = i
+                if args.index(i) == 3:
+                    self.x = i
+                if args.index(i) == 4:
+                    self.y = i
+        for key, value in kwargs.items():
+            if key == "height":
+                self.height = value
+            if key == "width":
+                self.width = value
+            if key == "x":
+                self.x = value
+            if key == "y":
+                self.y = value
+            if key == "id":
+                self.id = value
