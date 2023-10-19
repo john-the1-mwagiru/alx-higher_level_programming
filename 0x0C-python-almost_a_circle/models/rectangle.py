@@ -80,8 +80,23 @@ class Rectangle(Base):
             print("")
 
     def __str__(self):
+        """This function returns a string representation of the Rectangle instances"""
         string = "[" + str(self.__class__.__name__) + "] "
         string += "(" + str(self.id) + ")" + " "
         string += str(self.x) + "/" + str(self.y) + " " + "-" + " "
         string += str(self.width) + "/" + str(self.height)
         return string
+
+    def update(self, *args):
+        """This function updates the class Rectangle"""
+        for i in args:
+            if args.index(i) == 0:
+                self.id = i
+            if args.index(i) == 1:
+                self.width = i
+            if args.index(i) == 2:
+                self.height = i
+            if args.index(i) == 3:
+                self.x = i
+            if args.index(i) == 4:
+                self.y = i
