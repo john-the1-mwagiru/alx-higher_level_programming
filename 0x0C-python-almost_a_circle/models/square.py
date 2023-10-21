@@ -21,6 +21,29 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def update(self, *args, **kwargs):
+        """This function updates the class Square"""
+        if args:
+            for i in args:
+                if args.index(i) == 0:
+                    self.id = i
+                if args.index(i) == 1:
+                    self.size = i
+                if args.index(i) == 2:
+                    self.x = i
+                if args.index(i) == 3:
+                    self.y = i
+        for key, value in kwargs.items():
+            if key == "size":
+                self.width = value
+
+            if key == "x":
+                self.x = value
+            if key == "y":
+                self.y = value
+            if key == "id":
+                self.id = value
+
     def __str__(self):
         """This function returns a string representation of the Square instance"""
         string = "[" + str(self.__class__.__name__) + "] "
