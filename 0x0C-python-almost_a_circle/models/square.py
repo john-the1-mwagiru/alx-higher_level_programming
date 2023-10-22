@@ -22,7 +22,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
-        """This function updates the class Square"""
+        """This function updates the class Squarenhj"""
         if args:
             for i in args:
                 if args.index(i) == 0:
@@ -43,6 +43,16 @@ class Square(Rectangle):
                 self.y = value
             if key == "id":
                 self.id = value
+
+    def to_dictionary(self):
+        """Public method that returns the dictionary representation of a Square"""
+
+        return {
+            "id": self.id,
+            "size": self.size,
+            "x": self.x,
+            "y": self.y,
+        }
 
     def __str__(self):
         """This function returns a string representation of the Square instance"""
